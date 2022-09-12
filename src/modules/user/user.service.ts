@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm/dist';
+import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm/repository/Repository';
-import CreateUserDTO from './dto/create-user.dt';
+import CreateUserDTO from './dto/create-user.dto';
 import Users from './entity/Users';
 
 @Injectable()
@@ -15,7 +15,6 @@ class UserService {
     const user = new Users();
     user.username = newUser.username;
     user.password = newUser.password;
-    console.log(user);
 
     return await this.repository.save(user);
   }

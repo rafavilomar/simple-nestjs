@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DataSource } from 'typeorm';
+import ProductModule from './modules/product/product.module';
 import { UserModule } from './modules/user/user.module';
 
 @Module({
@@ -22,6 +23,7 @@ import { UserModule } from './modules/user/user.module';
     }),
     // MODULES
     UserModule,
+    ProductModule,
   ],
 })
 export class AppModule {
