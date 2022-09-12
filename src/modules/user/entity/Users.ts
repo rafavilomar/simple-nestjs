@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import PaymentOption from './PaymentOption';
 
 @Entity()
 export default class Users {
@@ -22,5 +23,7 @@ export default class Users {
 
   @Column({ nullable: true })
   enterprise?: string;
+
+  @OneToMany((type) => PaymentOption, (paymentOption) => paymentOption.user)
+  paymentOptions: PaymentOption[];
 }
-// export default Users;

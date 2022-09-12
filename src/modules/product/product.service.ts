@@ -10,8 +10,8 @@ export default class ProductService {
     private repository: Repository<Product>,
   ) {}
 
-  async create(product: Product): Promise<Product> {
-    return await this.repository.save(product);
+  async create(PRODUCT: Product): Promise<Product> {
+    return await this.repository.save(PRODUCT);
   }
 
   async findAll(): Promise<Product[]> {
@@ -23,12 +23,12 @@ export default class ProductService {
   }
 
   async buy(id: number, quantity: number) {
-    const product = await this.repository.findOneBy({ id });
-    if (!product) {
+    const PRODUCT = await this.repository.findOneBy({ id });
+    if (!PRODUCT) {
       throw new Error('Product not found: ' + id);
     }
-    product.quantity -= quantity;
-    await this.repository.save(product);
+    PRODUCT.quantity -= quantity;
+    await this.repository.save(PRODUCT);
   }
 
   async findByName(name: string): Promise<Product | null> {
