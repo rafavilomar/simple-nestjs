@@ -13,5 +13,14 @@ export default class Users {
 
   @Column({ nullable: false })
   password: string;
+
+  @Column({ nullable: true })
+  email?: string;
+
+  @Column({ nullable: true })
+  address?: string;
+
+  @Column({ nullable: true })
+  enterprise?: string;
 }
 // export default Users;

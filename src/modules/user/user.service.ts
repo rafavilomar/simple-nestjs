@@ -18,5 +18,13 @@ class UserService {
 
     return await this.repository.save(user);
   }
+
+  async update(updatedUser: Users): Promise<Users> {
+    const oldUser = await this.repository.findOneBy({ id: updatedUser.id });
+    if (!oldUser) {
+      throw new Error('User not found: ' + updatedUser.id);
+    }
+    return await this.repository.save(updatedUser);
+  }
 }
 export default UserService;
