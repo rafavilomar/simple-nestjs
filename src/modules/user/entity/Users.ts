@@ -1,4 +1,5 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import Order from '../../order/entity/Order';
 import PaymentOption from './PaymentOption';
 
 @Entity()
@@ -26,4 +27,7 @@ export default class Users {
 
   @OneToMany((type) => PaymentOption, (paymentOption) => paymentOption.user)
   paymentOptions: PaymentOption[];
+
+  @OneToMany((type) => Order, (order) => order.user)
+  orders: Order[];
 }
