@@ -6,9 +6,9 @@ import {
   ManyToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import Product from '../../product/entity/Product';
-import PaymentOption from '../../user/entity/PaymentOption';
-import Users from '../../user/entity/Users';
+import Product from '../../product/entity/product.entity';
+import PaymentOption from '../../user/entity/payment-option.entity';
+import Users from '../../user/entity/users.entity';
 
 export enum OrderStatus {
   IN_PROGRESS,

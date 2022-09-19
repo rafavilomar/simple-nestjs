@@ -7,10 +7,12 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger/dist';
 import CreatePaymentOptionDTO from '../dto/create-payment-option.dto';
-import PaymentOption from '../entity/PaymentOption';
+import PaymentOption from '../entity/payment-option.entity';
 import PaymentOptionService from '../service/payment-option.service';
 
+@ApiTags('Payment Option Module')
 @Controller('payment-option')
 export default class PaymentOptionController {
   constructor(private readonly paymentOptionService: PaymentOptionService) {}

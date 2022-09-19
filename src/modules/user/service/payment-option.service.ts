@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import CreatePaymentOptionDTO from '../dto/create-payment-option.dto';
-import PaymentOption from '../entity/PaymentOption';
+import PaymentOption from '../entity/payment-option.entity';
 import UserService from './user.service';
 
 @Injectable()

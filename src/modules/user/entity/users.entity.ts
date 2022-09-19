@@ -1,6 +1,6 @@
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
-import Order from '../../order/entity/Order';
-import PaymentOption from './PaymentOption';
+import Order from '../../order/entity/order.entity';
+import PaymentOption from './payment-option.entity';
 
 @Entity()
 export default class Users {

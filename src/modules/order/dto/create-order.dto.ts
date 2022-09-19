@@ -1,6 +1,6 @@
-import Product from '../../product/entity/Product';
+import Product from '../../product/entity/product.entity';
 
-export default interface CreateOrderDTO {
+export default class CreateOrderDTO {
   paymentOptionId: number;
   products: Product[];
 }

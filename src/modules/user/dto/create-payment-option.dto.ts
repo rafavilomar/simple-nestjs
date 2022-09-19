@@ -1,4 +1,4 @@
-export default interface CreatePaymentOptionDTO {
+export default class CreatePaymentOptionDTO {
   name: string;
   owner: string;
   number: string;

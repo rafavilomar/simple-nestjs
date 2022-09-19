@@ -6,10 +6,12 @@ import {
   Post,
   Query,
 } from '@nestjs/common/decorators';
+import { ApiTags } from '@nestjs/swagger/dist';
 import CreateOrderDTO from './dto/create-order.dto';
-import Order from './entity/Order';
+import Order from './entity/order.entity';
 import OrderService from './order.service';
 
+@ApiTags('Order Module')
 @Controller('order')
 export default class OrderController {
   constructor(private readonly orderService: OrderService) {}
