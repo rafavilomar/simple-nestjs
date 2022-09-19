@@ -2,9 +2,9 @@ version: '3.7'
 
 services:
   app:
+    image: 'rafavilomar/simple-nestjs:latest'
     container_name: app_backend
     restart: always
-    build: .
     env_file: .env
     ports:
       - 3500:3500
