@@ -8,6 +8,7 @@
   - [On your machine](#on-your-machine)
 - [Services documentation](#services-documentation)
 - [Author](#author)
+- [Soon](#soon)
 
 ## Technologies
 ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat&logo=TypeScript&logoColor=ffffff)
@@ -97,4 +98,10 @@ This project is using [Swagger](https://swagger.io/) to map all endpoints, reque
 - Author: Rafael Vilomar
 - LinkedIn: https://www.linkedin.com/in/rafavilomar/
 - Email: rafavilomar@gmail.com
+
+### Soon
+- Redis implementation
+- JWT
+- Shopping car services
+- Products filter services
 
